@@ -24,7 +24,8 @@ body {
 }
 
 .logo {
-    font-size: 25px;
+
+    font-size: 30px;
     color: rgb(255, 255, 255);
     text-decoration: none;
     /* убирает подчеркиване сылки */
@@ -158,7 +159,7 @@ footer p {
 .header-2 h1 {
     color: white;
     font-size: 55px;
-    padding: 55px 30px;
+    padding: 66px 30px 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -167,19 +168,31 @@ footer p {
 .content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    overflow: auto;
 
+    /* скрытие контента, выходящего за границы */
 }
+
 
 .content--item {
-  background-color: rgb(125, 110, 241);
-  padding: 10px;
-  margin: 10px;
-  border-radius: 26px;
-  transition: 0.1s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 26px;
+    transition: 0.55s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    transition: opacity 3s ease;
+    
+
 }
+
+.content--item.animated {
+    opacity: 1;
+}
+
 
 .content--item a {
     text-decoration: none;
@@ -192,10 +205,15 @@ footer p {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .content--item img {
-    height: 555px;
-
+    box-shadow: 0px 0px 25px 10px #fc00c194;
+    height: 444px;
+    width: 444px;
+    border-radius: 32px;
+    border: 3px solid rgb(0, 0, 0);
+    opacity: 0.92;
 }
 
