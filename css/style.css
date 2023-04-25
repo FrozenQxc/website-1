@@ -45,6 +45,34 @@ body {
     color: rgb(186, 112, 255);
 }
 
+.frozen {
+    margin-left: 12%;
+    border-radius: 145px;
+    background-color: #fff;
+    box-shadow: 22px 22px 22px #e23333;
+
+    animation: shadow 4s infinite;
+}
+
+.frozen:hover {
+    transform: scale(1.3);
+}
+
+.frozen img {
+    border: solid 4px white;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    height: 300px;
+    width: 300px;
+    border-radius: 155px;
+
+    transition: transform 0.5s ease;
+
+    animation-fill-mode: forwards;
+    animation-duration: 5s;
+    animation-name: hide;
+}
+
 .home {
     background: url('https://sun9-61.userapi.com/impg/xPhZhSUapBdWS7KUQEHqyiTOtxHygVJQZuinkg/7KPBbbkvCEc.jpg?size=2560x1440&quality=96&sign=a5ae1807bcaa75d66c1e3eb6da5743ab&type=album') no-repeat;
     background-size: cover;
@@ -56,10 +84,18 @@ body {
 }
 
 .home-content {
+    opacity: 0;
     max-width: 600px;
+    animation: hide;
+
+    animation-fill-mode: forwards;
+    animation-duration: 5s;
+    animation-name: hide;
 }
 
+
 .home-content h1 {
+    position: relative;
     font-size: 56px;
     font-weight: 700;
     line-height: 1.2;
@@ -149,12 +185,10 @@ footer p {
     color: aliceblue;
 }
 
-
 .header-2 {
     min-height: 100vh;
     background: #fff url(https://gamerwall.pro/uploads/posts/2021-11/1637711413_9-gamerwall-pro-p-nait-siti-kiberpank-oboi-oboi-na-rabochii-12.jpg) center center/cover no-repeat;
 }
-
 
 .header-2 h1 {
     color: white;
@@ -169,30 +203,25 @@ footer p {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     overflow: auto;
-
     /* скрытие контента, выходящего за границы */
-}
 
+}
 
 .content--item {
     padding: 10px;
     margin: 10px;
     border-radius: 26px;
-    transition: 0.55s;
+    transition: opacity 2s ease;
     display: flex;
     justify-content: center;
     align-items: center;
-
     opacity: 0;
-    transition: opacity 3s ease;
-    
-
 }
 
 .content--item.animated {
     opacity: 1;
-}
 
+}
 
 .content--item a {
     text-decoration: none;
@@ -217,3 +246,27 @@ footer p {
     opacity: 0.92;
 }
 
+
+  @keyframes shadow {
+    0% {
+      box-shadow: 0px 0 20px #ff0000;
+    }
+    50% {
+      box-shadow: 0px 0 20px #5aff07;
+    }
+    100% {
+      box-shadow: 0px 0 20px #0941fb;
+    }
+  }
+
+
+@keyframes hide {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
