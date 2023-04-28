@@ -6,7 +6,8 @@
 }
 
 body {
-    background: url('https://sun9-61.userapi.com/impg/xPhZhSUapBdWS7KUQEHqyiTOtxHygVJQZuinkg/7KPBbbkvCEc.jpg?size=2560x1440&quality=96&sign=a5ae1807bcaa75d66c1e3eb6da5743ab&type=album') center center/cover no-repeat;;
+    background: #fff url(https://sun9-61.userapi.com/impg/xPhZhSUapBdWS7KUQEHqyiTOtxHygVJQZuinkg/7KPBbbkvCEc.jpg?size=2560x1440&quality=96&sign=a5ae1807bcaa75d66c1e3eb6da5743ab&type=album) center top/auto repeat content-box local;
+    center center/cover no-repeat;;
     background-color: rgb(254, 254, 254);
 }
 
