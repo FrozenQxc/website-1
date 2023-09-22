@@ -6,8 +6,8 @@
 }
 
 body {
-    background: #fff url(https://sun9-61.userapi.com/impg/xPhZhSUapBdWS7KUQEHqyiTOtxHygVJQZuinkg/7KPBbbkvCEc.jpg?size=2560x1440&quality=96&sign=a5ae1807bcaa75d66c1e3eb6da5743ab&type=album) center top/auto repeat content-box local;
-    center center/cover no-repeat;;
+    background: #ffffff url(https://sun9-61.userapi.com/impg/xPhZhSUapBdWS7KUQEHqyiTOtxHygVJQZuinkg/7KPBbbkvCEc.jpg?size=2560x1440&quality=96&sign=a5ae1807bcaa75d66c1e3eb6da5743ab&type=album) center center/cover no-repeat local;
+
     background-color: rgb(254, 254, 254);
 }
 
@@ -76,7 +76,7 @@ body {
 }
 
 .home {
-   
+
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -249,17 +249,19 @@ footer p {
 }
 
 
-  @keyframes shadow {
+@keyframes shadow {
     0% {
-      box-shadow: 0px 0 20px #ff0000;
+        box-shadow: 0px 0 20px #ff0000;
     }
+
     50% {
-      box-shadow: 0px 0 20px #5aff07;
+        box-shadow: 0px 0 20px #5aff07;
     }
+
     100% {
-      box-shadow: 0px 0 20px #0941fb;
+        box-shadow: 0px 0 20px #0941fb;
     }
-  }
+}
 
 
 @keyframes hide {
