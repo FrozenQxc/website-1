@@ -38,13 +38,8 @@ a {
 .overlay {
 	height: 100vh;
 	width: 100vw;
-	box-shadow: -6px -45px 32px 13px rgba(0, 0, 0, 0); /* измените цвет тени на прозрачный */
-	background-color: rgba(
-		0,
-		0,
-		0,
-		0.3
-	); /* используйте 'rgba' для прозрачности */
+	box-shadow: 0 0 32px 13px rgba(0, 0, 0, 0.5); /* Измените все значения на положительные */
+	background-color: rgba(0, 0, 0, 0.3);
 	position: absolute;
 	top: 0;
 	left: 0;
