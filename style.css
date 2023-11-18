@@ -36,14 +36,18 @@ a {
 }
 
 .overlay {
-	height: 100%;
-	width: 100%;
-	box-shadow: -6px -45px 32px 13px #000000 inset, 9px 7px 23px 1px #000000 inset;
-	background-color: rgb(0, 0, 0, 0.2);
+	height: 100vh;
+	width: 100vw;
+	box-shadow: -6px -45px 32px 13px rgba(0, 0, 0, 0); /* измените цвет тени на прозрачный */
+	background-color: rgba(
+		0,
+		0,
+		0,
+		0.3
+	); /* используйте 'rgba' для прозрачности */
 	position: absolute;
 	top: 0;
 	left: 0;
-	/* display: none; */
 }
 
 .header__img {
@@ -140,6 +144,10 @@ a {
 
 .header__about h1 {
 	padding: 0px 0px 20px;
+}
+
+.header__about p {
+	width: 900px;
 }
 
 .about {
@@ -245,4 +253,35 @@ a {
 
 .icon_otdel img {
 	width: 80px;
+}
+
+.otdel_zabota {
+	padding: 50px;
+	height: 34vh;
+	color: #111;
+	margin-top: 53px;
+	background-color: #fff;
+}
+
+.otdel_zabota img {
+	width: 666px;
+	height: 355px;
+}
+
+.zabota {
+	gap: 55px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.zabota_text {
+}
+
+.zabota_text p {
+	margin-top: 20px;
+	font-size: 18px;
+	width: 500px;
+	font-weight: 100;
+	font-family: 'Open Sans', sans-serif;
 }
