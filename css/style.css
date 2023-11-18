@@ -1,276 +1,212 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	margin: 1;
+	padding: 0px;
+	box-sizing: border-box;
+	transition: all 300ms;
 }
 
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html,
 body {
-    background: #ffffff url(https://sun9-61.userapi.com/impg/xPhZhSUapBdWS7KUQEHqyiTOtxHygVJQZuinkg/7KPBbbkvCEc.jpg?size=2560x1440&quality=96&sign=a5ae1807bcaa75d66c1e3eb6da5743ab&type=album) center center/cover no-repeat local;
-
-    background-color: rgb(254, 254, 254);
+	max-width: 100vw;
+	overflow-x: hidden;
+	background-color: #111;
+	color: #bbb;
 }
 
-.header {
-    background-color: rgb(255, 255, 255);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 10%;
-    background: transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
+a {
+	text-decoration: none;
+	color: inherit;
 }
 
-.logo {
-
-    font-size: 30px;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    /* убирает подчеркиване сылки */
-    font-weight: 600;
+.main__container {
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0 60px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
-.navbar a {
-    font-size: 18px;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 35px;
-    transition: .3s;
+.overlay {
+	height: 100%;
+	width: 100%;
+	box-shadow: -6px -45px 32px 13px #000000 inset, 9px 7px 23px 1px #000000 inset;
+	background-color: rgb(0, 0, 0, 0.2);
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
 }
 
-.navbar a:hover {
-    color: rgb(186, 112, 255);
+.header__img {
+	background: url(/img/1.jpg);
+	background-size: cover;
+	height: 100vh;
+	width: 100vw;
 }
 
-.frozen {
-    margin-left: 12%;
-    border-radius: 145px;
-    background-color: #fff;
-    box-shadow: 22px 22px 22px #e23333;
-
-    animation: shadow 4s infinite;
+.text {
+	display: flex;
+	width: 600px;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 50px;
+	color: white;
 }
 
-.frozen:hover {
-    transform: scale(1.3);
+.text h1 {
+	font-size: 46px;
+	width: 300px;
+}
+.text p {
+	font-size: 18px;
+	padding: 10px 60px 10px 150px;
 }
 
-.frozen img {
-    border: solid 4px white;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    height: 300px;
-    width: 300px;
-    border-radius: 155px;
-
-    transition: transform 0.5s ease;
-
-    animation-fill-mode: forwards;
-    animation-duration: 5s;
-    animation-name: hide;
+.header__button {
+	display: flex;
 }
 
-.home {
-
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 0 10%;
+.header__button button {
+	font-size: 16px;
+	width: 130px;
+	justify-content: start;
+	color: #ffffff;
+	padding: 10px;
+	border: 1px solid #3c4e65;
+	background-color: #3c4e65;
+	cursor: pointer;
 }
 
-.home-content {
-    opacity: 0;
-    max-width: 600px;
-    animation: hide;
-
-    animation-fill-mode: forwards;
-    animation-duration: 5s;
-    animation-name: hide;
+.header__button button:hover {
+	color: #000000;
+	border: 1px solid #3c4e65;
+	background-color: #ffffff;
 }
 
-
-.home-content h1 {
-    position: relative;
-    font-size: 56px;
-    font-weight: 700;
-    line-height: 1.2;
-    color: aliceblue;
+.picture__container {
+	margin-top: 100px;
+	display: flex;
+}
+.picture__container img {
+	width: 100px;
 }
 
-.home-content h3 {
-    font-size: 32px;
-    font-weight: 700;
-    color: rgb(67, 246, 70);
+.picture__container h1 {
+	font-size: 35px;
 }
 
-.home-content p {
-    font-size: 18px;
-    margin: 20px 0 40px;
-    color: aliceblue;
+.picture_1 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 100px;
+	background-color: #a2a8ad;
 }
 
-.home-content .btn-box {
-    display: flex;
-    justify-content: space-between;
-    width: 345px;
-    height: 50px;
+.picture_2 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 100px;
+	background-color: #6a717a;
 }
 
-.btn-box a {
-    padding: 10px;
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-self: center;
-    width: 150px;
-    height: 100%;
-    color: rgba(244, 244, 244, 0.999);
-
-    border: 2px solid rgb(248, 245, 245);
-    font-size: 19px;
-    text-decoration: none;
-    border-radius: 8px;
-    letter-spacing: 1px;
-    z-index: 1;
-    overflow: hidden;
+.picture_3 {
+	padding: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background-color: #424a51;
 }
 
-.btn-box a:nth-child(2) {
-    background: transparent;
-    color: rgb(255, 255, 255);
+.header__about {
+	width: 1300px;
+	height: 65vh;
+	margin-top: 380px;
+	gap: 10px;
 }
 
-.btn-box a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    background-color: rgb(149, 1, 255);
-    z-index: -1;
-    transition: 0.5s;
+.header__about h1 {
+	padding: 0px 0px 20px;
 }
 
-.btn-box a:hover::before {
-    width: 100%;
+.about {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
-h2 {
-    color: #fff;
+.about_2 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 101px;
+	gap: 50px;
 }
 
-footer {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    bottom: 0;
-    width: 100%;
-
+.about_img img {
+	width: 300px;
+}
+.text_1 {
+	gap: 35px;
+	display: flex;
+	align-items: center;
 }
 
-footer a {
-    margin: 10px;
-    font-size: 50px;
+.text_1 img {
+	width: 80px;
 }
 
-footer p {
-    margin-top: 25px;
-    font-size: 22px;
-    color: aliceblue;
+.some_text {
+	display: flex;
+	flex-direction: column;
 }
 
-.header-2 {
-    min-height: 100vh;
-    background: #fff url(https://gamerwall.pro/uploads/posts/2021-11/1637711413_9-gamerwall-pro-p-nait-siti-kiberpank-oboi-oboi-na-rabochii-12.jpg) center center/cover no-repeat;
+.all_text {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
 }
 
-.header-2 h1 {
-    color: white;
-    font-size: 55px;
-    padding: 66px 30px 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.header__about h1 {
+	color: #ffffff;
 }
 
-.content {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    overflow: auto;
-    /* скрытие контента, выходящего за границы */
-
+.header__about p {
+	color: #ffffff;
+	font-size: 22px;
 }
 
-.content--item {
-    padding: 10px;
-    margin: 10px;
-    border-radius: 26px;
-    transition: opacity 2s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
+.otdel {
+	background-color: #858e99;
+	height: 333px;
 }
 
-.content--item.animated {
-    opacity: 1;
-
+.container {
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0 60px;
 }
 
-.content--item a {
-    text-decoration: none;
-    font-size: 35px;
-    color: aliceblue;
-
+.our_otdel h1 {
+	margin-top: 55px;
 }
 
-.content--item h4 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.content--item img {
-    box-shadow: 0px 0px 25px 10px #fc00c194;
-    height: 444px;
-    width: 444px;
-    border-radius: 32px;
-    border: 3px solid rgb(0, 0, 0);
-    opacity: 0.92;
-}
-
-
-@keyframes shadow {
-    0% {
-        box-shadow: 0px 0 20px #ff0000;
-    }
-
-    50% {
-        box-shadow: 0px 0 20px #5aff07;
-    }
-
-    100% {
-        box-shadow: 0px 0 20px #0941fb;
-    }
-}
-
-
-@keyframes hide {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-
+.our_otdel {
+	margin-top: 800px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }
