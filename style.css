@@ -24,6 +24,8 @@ body {
 }
 
 .intro {
+	box-shadow: 1px -3px 0px 51px #000000 inset;
+
 	max-height: 100vh;
 	overflow: hidden;
 }
@@ -42,6 +44,7 @@ body {
 }
 
 .intro__content {
+	box-shadow: 1px 2px 25px 29px #000000 inset;
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -111,4 +114,32 @@ body {
 	gap: 20px;
 	display: flex;
 	flex-direction: column;
+}
+
+audio {
+}
+
+/* Стили для элементов управления плеером (кнопки воспроизведения, ползунки и т.д.) */
+audio::-webkit-media-controls-panel {
+	border: none;
+	background-color: rgb(227, 252, 231);
+}
+
+audio::-webkit-media-controls-play-button {
+	/* Стили для кнопки воспроизведения (вебкит-браузеры) */
+}
+
+/* Пример для кнопки воспроизведения в других браузерах */
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-pause-button {
+	color: fuchsia;
+}
+
+/* Стили для отображения времени аудиоплеера */
+audio::-webkit-media-controls-current-time-display {
+	color: fuchsia;
+}
+
+audio::-webkit-media-controls-time-remaining-display {
+	color: fuchsia;
 }
